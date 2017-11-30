@@ -1,1 +1,0 @@
-../../../../../HTManager/HTManager/HTCollectionCategory/HTCollectionViewHandler+Delegate.h
