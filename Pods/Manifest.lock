@@ -1,0 +1,77 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - FBRetainCycleDetector (0.1.3)
+  - HTManager (1.0.0):
+    - AFNetworking (~> 3.1.0)
+    - BlocksKit (~> 2.2.5)
+    - Masonry (~> 1.0.1)
+    - MJRefresh (~> 3.1.12)
+  - IQKeyboardManager (4.0.9)
+  - Masonry (1.0.2)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
+  - MLeaksFinder (0.2.1):
+    - FBRetainCycleDetector
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - BlocksKit (~> 2.2.5)
+  - HTManager (from `../HTManager`)
+  - IQKeyboardManager
+  - Masonry (~> 1.0.1)
+  - MJExtension (~> 3.0.13)
+  - MJRefresh (~> 3.1.12)
+  - MLeaksFinder (~> 0.2.1)
+  - SDWebImage
+
+EXTERNAL SOURCES:
+  HTManager:
+    :path: ../HTManager
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
+  HTManager: 286123dabed1d1df33be92f38afe228a487d5e91
+  IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+
+PODFILE CHECKSUM: 228b351a786432a67bff42b1bfa475fe3747e9c7
+
+COCOAPODS: 1.4.0.beta.2

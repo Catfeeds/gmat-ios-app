@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HTIsPayAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrP-m7-gNR">
+                    <rect key="frame" x="37.5" y="214" width="300" height="239"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveAlertBG" translatesAutoresizingMaskIntoConstraints="NO" id="MTC-F6-JRl">
+                            <rect key="frame" x="-0.5" y="0.5" width="300" height="238.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的当前的雷豆数:20000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbh-hn-5AK">
+                            <rect key="frame" x="30.5" y="150" width="161.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.54897153377532959" green="0.54905146360397339" blue="0.5489463210105896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(如果雷豆不足,点击确定进入支付页面)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPg-fs-mbD">
+                            <rect key="frame" x="30.5" y="172" width="243" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.54897153379999997" green="0.54905146360000001" blue="0.54894632099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kp6-13-gQq">
+                            <rect key="frame" x="20" y="199" width="120" height="30"/>
+                            <color key="backgroundColor" red="0.2246817946434021" green="0.5522645115852356" blue="0.88356548547744751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="确      定">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="confirm:" destination="iN0-l3-epB" eventType="touchUpInside" id="noN-bk-Kz9"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否花费10000雷豆进入直播间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="Eqw-ix-f7S">
+                            <rect key="frame" x="30.5" y="102" width="239.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="Kuh-Fk-8Xd">
+                            <rect key="frame" x="40" y="-24.5" width="220" height="116"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Kuh-Fk-8Xd" secondAttribute="height" multiplier="499:263" id="JgA-49-wYS"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gte-RH-Awd">
+                            <rect key="frame" x="170" y="199" width="120" height="30"/>
+                            <color key="backgroundColor" red="0.61557686328887939" green="0.6156470775604248" blue="0.6195952296257019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="取       消">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Llk-sO-KPN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="MTC-F6-JRl" firstAttribute="leading" secondItem="NrP-m7-gNR" secondAttribute="leading" id="2P4-n4-IMT"/>
+                        <constraint firstItem="iPg-fs-mbD" firstAttribute="top" secondItem="Cbh-hn-5AK" secondAttribute="bottom" constant="5" id="7HV-4B-ifL"/>
+                        <constraint firstAttribute="trailing" secondItem="Kuh-Fk-8Xd" secondAttribute="trailing" constant="40" id="943-PY-2i2"/>
+                        <constraint firstItem="MTC-F6-JRl" firstAttribute="top" secondItem="NrP-m7-gNR" secondAttribute="top" id="FKz-LA-Sp1"/>
+                        <constraint firstAttribute="bottom" secondItem="MTC-F6-JRl" secondAttribute="bottom" id="FR8-Cx-77T"/>
+                        <constraint firstItem="Cbh-hn-5AK" firstAttribute="leading" secondItem="Eqw-ix-f7S" secondAttribute="leading" id="HKk-On-QI7"/>
+                        <constraint firstItem="iPg-fs-mbD" firstAttribute="leading" secondItem="Eqw-ix-f7S" secondAttribute="leading" id="OC7-od-CRr"/>
+                        <constraint firstItem="Gte-RH-Awd" firstAttribute="width" secondItem="kp6-13-gQq" secondAttribute="width" id="P92-Lg-Zam"/>
+                        <constraint firstAttribute="width" secondItem="NrP-m7-gNR" secondAttribute="height" multiplier="337:269" id="QR5-bC-V8K"/>
+                        <constraint firstItem="Eqw-ix-f7S" firstAttribute="top" secondItem="Kuh-Fk-8Xd" secondAttribute="bottom" constant="10" id="Tyi-K0-ek6"/>
+                        <constraint firstAttribute="bottom" secondItem="kp6-13-gQq" secondAttribute="bottom" constant="10" id="VUV-Qq-aCM"/>
+                        <constraint firstAttribute="trailing" secondItem="MTC-F6-JRl" secondAttribute="trailing" id="aHU-uH-Cov"/>
+                        <constraint firstItem="kp6-13-gQq" firstAttribute="top" secondItem="iPg-fs-mbD" secondAttribute="bottom" constant="10" id="dmx-FB-bZq"/>
+                        <constraint firstAttribute="trailing" secondItem="Gte-RH-Awd" secondAttribute="trailing" constant="10" id="jM0-m0-tN6"/>
+                        <constraint firstItem="kp6-13-gQq" firstAttribute="leading" secondItem="NrP-m7-gNR" secondAttribute="leading" constant="20" id="lMK-o3-0HD"/>
+                        <constraint firstItem="Eqw-ix-f7S" firstAttribute="centerX" secondItem="NrP-m7-gNR" secondAttribute="centerX" id="mTO-Ry-C2J"/>
+                        <constraint firstAttribute="width" constant="300" id="pPS-jb-1Kh"/>
+                        <constraint firstItem="Gte-RH-Awd" firstAttribute="centerY" secondItem="kp6-13-gQq" secondAttribute="centerY" id="qZr-hL-yut"/>
+                        <constraint firstItem="Gte-RH-Awd" firstAttribute="leading" secondItem="kp6-13-gQq" secondAttribute="trailing" constant="30" id="rgn-5J-6aF"/>
+                        <constraint firstItem="Gte-RH-Awd" firstAttribute="height" secondItem="kp6-13-gQq" secondAttribute="height" id="tEb-2p-n3K"/>
+                        <constraint firstItem="Kuh-Fk-8Xd" firstAttribute="leading" secondItem="NrP-m7-gNR" secondAttribute="leading" constant="40" id="vCe-vc-UW1"/>
+                        <constraint firstItem="Kuh-Fk-8Xd" firstAttribute="top" secondItem="NrP-m7-gNR" secondAttribute="top" constant="-25" id="xFi-bl-61I"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.23153895547945205" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NrP-m7-gNR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="e73-Xm-lP3"/>
+                <constraint firstItem="NrP-m7-gNR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qaz-73-o5U"/>
+            </constraints>
+            <connections>
+                <outlet property="currentIntegral" destination="Cbh-hn-5AK" id="Cd3-0E-JqC"/>
+                <outlet property="describeLabel" destination="iPg-fs-mbD" id="qXh-zL-ys8"/>
+                <outlet property="titleLabel" destination="Eqw-ix-f7S" id="pwf-Pc-Ju0"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="book" width="249" height="131"/>
+        <image name="liveAlertBG" width="337" height="269"/>
+    </resources>
+</document>
