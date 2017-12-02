@@ -13,6 +13,7 @@
 -(void)awakeFromNib{
 	[super awakeFromNib];
 	self.scrollView.delegate = self;
+    
 }
 
 - (IBAction)removeAction:(id)sender {
