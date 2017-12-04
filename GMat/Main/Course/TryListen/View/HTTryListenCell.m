@@ -23,9 +23,7 @@
 	[self addSubview:self.titleNameButton];
 	[self addSubview:self.courseDetailLabel];
 	[self.titleNameButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//		make.edges.mas_equalTo(self);
-		make.centerX.equalTo(self);
-		make.centerY.equalTo(self);
+		make.edges.mas_equalTo(self);
 	}];
 	[self.courseDetailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.bottom.mas_equalTo(self).offset(- HTADAPT568(10));
@@ -55,7 +53,8 @@
 	if (!_titleNameButton) {
 		_titleNameButton = [[UIButton alloc] init];
 		[_titleNameButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		_titleNameButton.titleLabel.font = [UIFont systemFontOfSize:HTADAPT568(16) weight:0.1];
+//		_titleNameButton.titleLabel.font = [UIFont systemFontOfSize:HTADAPT568(16) weight:0.1];
+		_titleNameButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
 		_titleNameButton.userInteractionEnabled = false;
 		
 	}
