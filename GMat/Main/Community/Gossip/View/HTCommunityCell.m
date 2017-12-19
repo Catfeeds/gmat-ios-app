@@ -43,8 +43,6 @@
     
     CGFloat modelHeight = self.headerContentView.ht_h;
     [model ht_setRowHeightNumber:@(modelHeight) forCellClass:self.class];
-	
-    
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
