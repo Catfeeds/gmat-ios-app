@@ -124,7 +124,7 @@ static NSString *kHTApplicationIdString = @"1067751179";
 }
 
 + (void)requestGossipListWithNetworkModel:(HTNetworkModel *)networkModel pageSize:(NSString *)pageSize currentPage:(NSString *)currentPage complete:(HTUserTaskCompleteBlock)complete {
-	[HTNetworkManager requestModel:networkModel method:HTNetworkRequestMethodGet url:@"http://bbs.viplgw.cn/cn/app-api/gossip-list" parameter:@{@"page":HTPlaceholderString(currentPage, @"1"), @"pageSize":HTPlaceholderString(pageSize, @"10"), @"belong":@"1"} complete:complete];
+	[HTNetworkManager requestModel:networkModel method:HTNetworkRequestMethodPost url:@"http://bbs.viplgw.cn/cn/app-api/gossip-list" parameter:@{@"page":HTPlaceholderString(currentPage, @"1"), @"pageSize":HTPlaceholderString(pageSize, @"10"), @"belong":@"1"} complete:complete];
 }
 
 + (void)requestLiveListWithNetworkModel:(HTNetworkModel *)networkModel pageSize:(NSString *)pageSize currentPage:(NSString *)currentPage complete:(HTUserTaskCompleteBlock)complete {

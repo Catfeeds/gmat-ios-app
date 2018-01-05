@@ -80,31 +80,8 @@
             }
         }
 	}];
-	
-//	[attributeString enumerateAttribute:NSParagraphStyleAttributeName inRange:NSMakeRange(0, attributeString.length) options:NSAttributedStringEnumerationReverse usingBlock:^(id  _Nullable value, NSRange range, BOOL * _Nonnull stop) {
-//
-//		NSString *regex = @"\\s*";
-//		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-//		NSString *str = [attributeString.string substringWithRange:range];
-//		NSLog(@"文字:%@",str);
-//		if ([predicate evaluateWithObject:str]) {
-//			NSLog(@"匹配");
-//		}
-//		NSLog(@"段落范围: %@",NSStringFromRange(range));
-//	}];
-	
 	return attributeString;
 }
-
-////移除最后 <p><br/></p>
-//- (NSString *)removeSuffix:(NSString *)str{
-//    NSString *suffix = ;
-//    if ([str hasSuffix:suffix]) {
-//       NSString *newStr =  [str stringByReplacingCharactersInRange:NSMakeRange(str.length - suffix.length, suffix.length) withString:@""];
-//		return [self removeSuffix:newStr];
-//    }
-//    return str;
-//}
 
 //替换多余行高
 - (NSString *)replaceParagraphSpace:(NSString *) str{

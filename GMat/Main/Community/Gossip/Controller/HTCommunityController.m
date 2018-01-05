@@ -77,21 +77,22 @@
 				}
 				if (currentPage.integerValue == 1) {
 					weakSelf.communityLayoutModelArray = communityLayoutModelArray;
+					[[weakSelf.tableView tableHandler].sectionMakerArray removeAllObjects];
 				} else {
 					[weakSelf.communityLayoutModelArray addObjectsFromArray:communityLayoutModelArray];
 				}
+				
 				dispatch_async(dispatch_get_main_queue(), ^{
 					[weakSelf.tableView ht_endRefreshWithModelArrayCount:communityLayoutModelArray.count];
-					
-					//自己
 					[communityLayoutModelArray enumerateObjectsUsingBlock:^(HTCommunityLayoutModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-						[weakSelf.tableView ht_updateSection:idx sectionMakerBlock:^(HTTableViewSectionMaker *sectionMaker) {
+						NSInteger setctionIndex = weakSelf.communityLayoutModelArray.count - communityLayoutModelArray.count + idx;
+						[weakSelf.tableView ht_updateSection:setctionIndex sectionMakerBlock:^(HTTableViewSectionMaker *sectionMaker) {
+							
 							if (idx == 0) {
 								self.tempLiveSectionMaker = sectionMaker;
 								HTComplaintModel *complaint = [HTComplaintModel mj_objectWithKeyValues:response];
 								UIView *headerView = [self liveSectionHeaderView:complaint];
 								if (headerView) {
-//									sectionMaker.headerView(headerView).headerHeight(HTSCREENWIDTH/(526.0/230.0) + 7);
 									sectionMaker.headerView(headerView);
 								}else {
 									sectionMaker.headerView(nil).headerHeight(0);

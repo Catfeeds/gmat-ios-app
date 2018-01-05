@@ -125,6 +125,9 @@
 	
 	[HTRequestManager  requestLiveListWithNetworkModel:networkModel pageSize:@"20" currentPage:@(self.currentPage).stringValue complete:^(id response, HTError *errorModel) {
 		
+		[weakSelf.liveListTableView.mj_footer endRefreshing];
+		[weakSelf.liveListTableView.mj_header endRefreshing];
+		
 		NSInteger ringCount  = [response[@"num"] integerValue];
 		[self setLiveNumber:response[@"userNumber"]];
 		if (ringCount > 0) {
@@ -169,8 +172,6 @@
 			self.noLiveAlert.frame = weakSelf.liveListTableView.frame;
 			[weakSelf.view addSubview:self.noLiveAlert];
 		}
-		[weakSelf.liveListTableView.mj_footer endRefreshing];
-		[weakSelf.liveListTableView.mj_header endRefreshing];
 	}];
 }
 
