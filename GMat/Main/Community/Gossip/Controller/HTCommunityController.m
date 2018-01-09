@@ -76,8 +76,10 @@
 					});
 				}
 				if (currentPage.integerValue == 1) {
+					
 					weakSelf.communityLayoutModelArray = communityLayoutModelArray;
 					[[weakSelf.tableView tableHandler].sectionMakerArray removeAllObjects];
+					
 				} else {
 					[weakSelf.communityLayoutModelArray addObjectsFromArray:communityLayoutModelArray];
 				}
