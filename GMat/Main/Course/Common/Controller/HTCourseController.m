@@ -285,7 +285,7 @@
 	if (!_scrollPageHeaderView) {
         
         __weak HTCourseController *weakSelf = self;
-		_scrollPageHeaderView = [[HTScrollPageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 220)];
+		_scrollPageHeaderView = [[HTScrollPageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 430.0/750.0 * self.view.bounds.size.width)];
         [_scrollPageHeaderView setButtonForIndexPath:^(UIButton *button, NSInteger index) {
             HTCourseBannerModel *bannerModel = weakSelf.bannerModelArray[index];
             [button sd_setBackgroundImageWithURL:[NSURL URLWithString:GmatResourse(bannerModel.contentthumb)] forState:UIControlStateNormal placeholderImage:HTPLACEHOLDERIMAGE];

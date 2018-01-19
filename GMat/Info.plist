@@ -113,7 +113,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>访问相机</string>
+	<string>需要访问相机拍照上传图片</string>
 	<key>NSContactsUsageDescription</key>
 	<string>访问通讯录让语音识别更容易</string>
 	<key>NSMicrophoneUsageDescription</key>
