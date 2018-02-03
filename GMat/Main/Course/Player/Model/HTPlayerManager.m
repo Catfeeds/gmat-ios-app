@@ -17,6 +17,15 @@
 	[request setValue:@"Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Mobile/14E8301" forHTTPHeaderField:@"User-Agent"];
 	NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 		NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+		
+		NSString *playerXMLURL;
+		
+		NSRange range = [responseString rangeOfString:@"xmlUrl='(.*?)'" options:NSRegularExpressionSearch];
+		if (range.location != NSNotFound) {
+			playerXMLURL = [responseString substringWithRange:NSMakeRange(range.location + 8,range.length - 9)];
+		}
+	
+	/*	responseString = @"xxxxxxxxxxxxhttp://cache.gensee.com123456xml'";
 		NSRange startRange = NSMakeRange(0, 0);
 		NSString *playerXMLURL;
 		while (!playerXMLURL.length && startRange.location + startRange.length < responseString.length) {
@@ -39,6 +48,7 @@
 				}
 			}
 		}
+	 */
 		if (complete) {
 			complete(playerXMLURL);
 		}

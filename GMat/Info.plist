@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.0.5</string>
+	<string>4.0.6</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -117,9 +117,9 @@
 	<key>NSContactsUsageDescription</key>
 	<string>访问通讯录让语音识别更容易</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>访问麦克风</string>
+	<string>需要访问麦克风录音</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>访问相册</string>
+	<string>需要访问相册存取图片</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
